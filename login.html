@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desi Angadi</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
+        <style>
+            body{
+                background-image: url("BackgroundF.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+            h1{
+                font-family: 'Princess Sofia', cursive;
+                font-size: 60px;
+                color: #004A63;
+                margin-left: 70px;
+                margin-top: 25px;
+            }
+            .form {
+            border-radius: 10px;
+            background: #00aec4;
+            max-width: 320px;
+            margin-left: 230px;
+            margin-top: 60px;
+            padding: 45px;
+            text-align: center;
+            }
+            .form input, textarea {
+            font-family: "Open Sans", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 20px;
+            }
+            .form button {
+            font-family: "Open Sans", sans-serif;
+            text-transform: uppercase;
+            background: white;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: black;
+            font-size: 20px;
+            }
+            .form button:hover,.form button:active,.form button:focus {
+            background: #51ce57;
+            }
+            .form .message {
+            margin: 15px 0 0;
+            color: black;
+            font-size: 20px;
+            }
+            .form .message a {
+            color: white;
+            text-decoration: none;
+            }
+            .form .register-form {
+            display: none;
+            }
+            button a{
+            text-decoration: none;
+            color: #FFFFFF;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Desi Angadi</h1>
+        <div class="form">
+            <form class="register-form">
+            <input type="text" name= "newusername" placeholder="name"/>
+            <input type="password" name="newpassword" placeholder="password"/>
+            <input type="text" name="newemail" placeholder="email address"/>
+            <button>Create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+            <input type="text" name="username" placeholder="username"/>
+            <input type="password" name="password" placeholder="password"/>
+            <button>Login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
