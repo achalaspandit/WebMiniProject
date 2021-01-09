@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
         <style>
             body{
-                background-image: url("../Resources/BackgroundF.png");
+                background-image: url("../static/BackgroundF.png");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
@@ -51,13 +51,13 @@
         <h1>Desi Angadi</h1>
         <div>
             <form action="{{ url_for('seller') }}" method="post">
-                <img src="../Resources/sell.png"/> <br/>
+                <img src="../static/sell.png"/> <br/>
                 <button> Seller Portal</button>
             </form>
         </div>
         <div>
             <form action="{{ url_for('buyer') }}" method="post">
-                <img src="../Resources/buyer.jpg"/> <br/>
+                <img src="../static/buyer.jpg"/> <br/>
                 <button> Buyer Portal</button>
             </form>
         </div>

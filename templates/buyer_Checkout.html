@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
         <style>
             body{
-                background-image: url("../Resources/BackgroundF.png");
+                background-image: url("../static/BackgroundF.png");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
@@ -23,7 +23,7 @@
                 font-family: 'Lancelot', cursive;
                 font-size: 40px;
                 display: block;
-                color: #e90e0e;
+                color: white;
                 margin-left: 70px;
                 margin-top: 30px;
             }
@@ -32,6 +32,7 @@
                 margin-top: 20px;
                 margin-left: 40px;
                 margin-right: 40px;
+                margin-bottom: 40px;
                 padding: 40px;
                 background-color: #00aec4;
                 border-radius: 10px;
@@ -46,10 +47,25 @@
                 color: #00aec4;
                 background-color: white;
             }
+            a{
+                text-decoration: none;
+                color: #00aec4;
+            }
             img{
                 width: 250px;
                 height: 250px;
                 border-radius: 10px;
+            }
+            form input text{
+                font-family: "Open Sans", sans-serif;
+                outline: 0;
+                background: #f2f2f2;
+                width: 100%;
+                border: 0;
+                margin: 0 0 15px;
+                padding: 15px;
+                box-sizing: border-box;
+                font-size: 20px;
             }
             p{
                 margin-left: 100px;
@@ -62,12 +78,20 @@
     </head>
     <body>
         <h1>Desi Angadi</h1>
-        <h3>Checkout Items</h3>
-        <p><lablel for="bill">Your total is: </lablel></p>
-        <input type = "text" id ="bill" name = "bill">
-        <br>
-        <button><a href ="file:///C:/Users/abhir/OneDrive/Desktop/WebMiniProject/templates/buyer_payment.html"/>CONFRM</button>
-        <button><a href ="file:///C:/Users/abhir/OneDrive/Desktop/WebMiniProject/templates/buyer_selection.html"/>ADD MORE</button>
-        <button>CANCEL</button>
+        <div>
+            <h3>Checkout Items</h3>
+            <p><lablel for="bill">Your total is: </lablel></p>
+            <input type = "text" id ="bill" name = "bill">
+            <h3>Choose your method of payment</h3>
+            <p><input type ="radio" id = "credit card" name="payement" value="credit card"></p>
+            <p><label for = "credit card">Credit Card</label><br></p>
+            <p><input type ="radio" id = "debit card" name="payement" value="debit card"></p>
+            <p><label for = "debit card">Debit Card</label><br></p>
+            <p><input type ="radio" id = "cod" name="payement" value="cod"></p>
+            <p><label for = "cod">C.O.D</label><br></p>
+            <button><a href ="https://www.google.com"/>CONFRM</button>
+            <button><a href ="https://www.google.com"/>ADD MORE</button>
+            <button>CANCEL</button>
+        </div>
      </body>
 </html>
