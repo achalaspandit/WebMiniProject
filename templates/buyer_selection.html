@@ -59,21 +59,24 @@
     <body>
         <h1>Desi Angadi</h1>
         <h3>Namaste, you are looking for...?</h3>
-        <div>
-            <img src="../static/condiments.png"/> <br/>
-            <button> Condiments</button>
-        </div>
-        <div>
-            <img src="../static/handicrafts.jpg"/> <br/>
-            <button>Handicrafts</button>
-        </div>
-        <div>
-            <img src="../static/jewellery.jpg"/> <br/>
-            <button>Jewellery</button>
-        </div>
-        <div>
-            <img src="../static/textile.jpg"/> <br/>
-            <button>Textiles</button>
-        </div>
+        <form action="{{ url_for('buyer_item') }}" method="post">
+            <div>
+                <img src="../static/condiments.png"/> <br/>
+                <button> Condiments</button>
+            </div>
+            <div>
+                <img src="../static/handicrafts.jpg"/> <br/>
+                <button>Handicrafts</button>
+            </div>
+            <div>
+                <img src="../static/jewellery.jpg"/> <br/>
+                <button>Jewellery</button>
+            </div>
+            <div>
+                <img src="../static/textile.jpg"/> <br/>
+                <button>Textiles</button>
+            </div>
+        </form>
+        
     </body>
 </html>

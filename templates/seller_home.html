@@ -51,13 +51,18 @@
     </head>
     <body>
         <h1>Desi Angadi</h1>
-        <div>
-            <img src="../static/orders.png"/> <br/>
-            <button> Orders </button>
-        </div>
-        <div>
-            <img src="../static/inv.jpg"/> <br/>
-            <button>Inventory</button>
-        </div>
+        
+            <div>
+                <img src="../static/orders.png"/> <br/>
+                <form action="{{ url_for('sellorder') }}" method="post"></form>
+                    <button> Orders </button>
+                </form>
+            </div>
+        <form action="{{ url_for('inventory') }}" method="post">
+            <div>
+                <img src="../static/inv.jpg"/> <br/>
+                <button>Inventory</button>
+            </div>
+        </form>
     </body>
 </html>

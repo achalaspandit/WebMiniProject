@@ -76,45 +76,47 @@
     <body>
         <h1>Desi Angadi</h1>
         <div>
-            <h3>Please make a selection</h3>
-            <a href="https://www.google.com"> Next</a>
-            <table>
-                <tr>
-                    <th> Design </th>
-                    <th> Product Name </th>
-                    <th> Description </th>
-                    <th> Price </th>
-                    <th> Quantity </th>
-                </tr>
-                <tr>
-                    <td> <img src="../static/handicrafts.jpg"/> </td>
-                    <td> Sample </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                    <td> 100 </td>
-                    <td> <input type="number" placeholder="Quantity"> </td>
-                </tr>
-                <tr>
-                    <td> <img src="../static/handicrafts.jpg"/> </td>
-                    <td> Sample </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                    <td> 100 </td>
-                    <td> <input type="number" placeholder="Quantity"> </td>
-                </tr>
-                <tr>
-                    <td> <img src="../static/handicrafts.jpg"/> </td>
-                    <td> Sample </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                    <td> 100 </td>
-                    <td> <input type="number" placeholder="Quantity"> </td>
-                </tr>
-                <tr>
-                    <td> <img src="../static/handicrafts.jpg"/> </td>
-                    <td> Sample </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                    <td> 100 </td>
-                    <td> <input type="number" placeholder="Quantity"> </td>
-                </tr>
-            </table>
+            <form action="{{ url_for('checkout') }}" method="post">
+                <h3>Please make a selection</h3>
+                <a href="https://www.google.com"> Next</a>
+                <table>
+                    <tr>
+                        <th> Design </th>
+                        <th> Product Name </th>
+                        <th> Description </th>
+                        <th> Price </th>
+                        <th> Quantity </th>
+                    </tr>
+                    <tr>
+                        <td> <img src="../static/handicrafts.jpg"/> </td>
+                        <td> Sample </td>
+                        <td> abcdefghijklmnopqrstuvwxyz </td>
+                        <td> 100 </td>
+                        <td> <input type="number" placeholder="Quantity"> </td>
+                    </tr>
+                    <tr>
+                        <td> <img src="../static/handicrafts.jpg"/> </td>
+                        <td> Sample </td>
+                        <td> abcdefghijklmnopqrstuvwxyz </td>
+                        <td> 100 </td>
+                        <td> <input type="number" placeholder="Quantity"> </td>
+                    </tr>
+                    <tr>
+                        <td> <img src="../static/handicrafts.jpg"/> </td>
+                        <td> Sample </td>
+                        <td> abcdefghijklmnopqrstuvwxyz </td>
+                        <td> 100 </td>
+                        <td> <input type="number" placeholder="Quantity"> </td>
+                    </tr>
+                    <tr>
+                        <td> <img src="../static/handicrafts.jpg"/> </td>
+                        <td> Sample </td>
+                        <td> abcdefghijklmnopqrstuvwxyz </td>
+                        <td> 100 </td>
+                        <td> <input type="number" placeholder="Quantity"> </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </body>
 </html>

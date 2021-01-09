@@ -109,9 +109,16 @@
                     <label for = "cod">C.O.D</label><br>
                 </div>
             </form>
-            <button><a href ="https://www.google.com"/>CONFIRM</button>
-            <button><a href ="https://www.google.com"/>ADD MORE</button>
-            <button>CANCEL</button>
+            <form action="{{ url_for('card') }}" method="post">
+                <button>CONFIRM</button>
+            </form>
+            <form action="{{ url_for('previous') }}" method="post">
+                <button>ADD MORE</button>
+            </form>
+            <form action="{{ url_for('gohome') }}" method="post">
+                <button>CANCEL</button>
+            </form>
+            
         </div>
      </body>
 </html>

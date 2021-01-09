@@ -27,7 +27,7 @@
                 margin-left: 70px;
                 margin-top: 30px;
             }
-            a{
+            button{
                 font-family: 'Lancelot', cursive;
                 font-size: 25px;
                 text-decoration: none;
@@ -69,7 +69,9 @@
         <h1>Desi Angadi</h1>
         <div>
             <h3>Inventory</h3>
-            <a href="https://www.google.com"> + Add Product</a>
+            <form action="{{ url_for('addproduct') }}" method="post">
+                <button> + Add Product</button>
+            </form>
             <table>
                 <tr>
                     <th> Product Name </th>
