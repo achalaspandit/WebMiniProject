@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
         <style>
             body{
-                background-image: url("BackgroundF.png");
+                background-image: url("../Resources/BackgroundF.png");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
@@ -80,7 +80,7 @@
             <button>Create</button>
             <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
-            <form class="login-form">
+            <form class="login-form" action="{{ url_for('seller_login') }}" method="post">
             <input type="text" name="username" placeholder="username"/>
             <input type="password" name="password" placeholder="password"/>
             <button>Login</button>

@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
         <style>
             body{
-                background-image: url("BackgroundF.png");
+                background-image: url("../Resources/Background.jpg");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
@@ -15,47 +15,39 @@
             h1{
                 font-family: 'Princess Sofia', cursive;
                 font-size: 60px;
-                color: #004A63;
+                color: #7F7128;
                 margin-left: 70px;
                 margin-top: 25px;
             }
-            div{
-                width: 18.5%;
-                height: 300px;
+            p{
+                width: 27%;
+                height: 320px;
                 margin-top: 20px;
-                margin-left: 120px;
+                margin-left: 50px;
                 margin-right: 40px;
                 padding: 40px;
                 float: left;
-                background-color: #00aec4;
+                background-color: #cb5819;
                 border-radius: 10px;
             }
             button{
-                margin: 40px;
-                padding: 15px;
-                font-family: 'Lancelot', cursive;;
-                font-size: 30px;
+                background-color: white;
+                margin-left: 140px;
+                color: #cb5819;
                 border: none;
                 border-radius: 10px;
-                color: #00aec4;
-                background-color: white;
-            }
-            img{
-                width: 250px;
-                height: 250px;
-                border-radius: 10px;
+                padding: 10px;
+                font-family: 'Lancelot', cursive;
+                font-size: 30px;
             }
         </style>
     </head>
     <body>
-        <h1>Desi Angadi</h1>
-        <div>
-            <img src="sell.png"/> <br/>
-            <button> Seller Portal</button>
-        </div>
-        <div>
-            <img src="buyer.jpg"/> <br/>
-            <button> Buyer Portal</button>
-        </div>
+        <form action="{{ url_for('forward') }}" method="post">
+            <h1>Desi Angadi</h1>
+            <p>
+                <button>Next</button>
+            </p>
+        </form>
     </body>
 </html>
