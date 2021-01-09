@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Select your item(s)</title>
+        <title>Select Items</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
@@ -22,70 +22,99 @@
             h3{
                 font-family: 'Lancelot', cursive;
                 font-size: 40px;
-                display: block;
-                color: #e90e0e;
+                display: inline;
+                color: white;
                 margin-left: 70px;
                 margin-top: 30px;
             }
+            a{
+                font-family: 'Lancelot', cursive;
+                font-size: 25px;
+                text-decoration: none;
+                margin-right: 50px;
+                float: right;
+                color: white;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid white;
+            }
             div{
-                max-width: 65%;
                 margin-top: 20px;
-                margin-left: 40px;
+                margin-left: 60px;
                 margin-right: 40px;
-                padding: 40px;
+                margin-bottom: 40px;
+                padding: 20px;
+                float: left;
                 background-color: #00aec4;
                 border-radius: 10px;
             }
-            button{
-                margin: 40px;
-                padding: 15px;
+            input{
+                width: 80%;
+                padding: 10px;
                 font-family: 'Lancelot', cursive;
-                font-size: 30px;
+                font-size: 20px ;
                 border: none;
                 border-radius: 10px;
-                color: #00aec4;
-                background-color: white;
+            }
+            table{
+                font-family: 'Lancelot', cursive;
+                font-size: 20px;
+                color: white;
+                margin: 20px;
+            }
+            th,tr,td{
+                padding: 12px;
+                border-bottom: 1px solid white;
             }
             img{
-                width: 250px;
-                height: 250px;
+                height: 150px;
+                width: 150px;
                 border-radius: 10px;
-            }
-            p{
-                margin-left: 100px;
-                color:  white;
-                display: inline;
-                font-family: 'Lancelot', cursive;
-                font-size: 25px;
             }
         </style>
     </head>
     <body>
         <h1>Desi Angadi</h1>
-        <h3>Please make a selection</h3>
         <div>
-            <img src = "../static/home_madeChocolates.jpg"/>
-            <p>Home made chocolates</p>
+            <h3>Please make a selection</h3>
+            <a href="https://www.google.com"> Next</a>
+            <table>
+                <tr>
+                    <th> Design </th>
+                    <th> Product Name </th>
+                    <th> Description </th>
+                    <th> Price </th>
+                    <th> Quantity </th>
+                </tr>
+                <tr>
+                    <td> <img src="../static/handicrafts.jpg"/> </td>
+                    <td> Sample </td>
+                    <td> abcdefghijklmnopqrstuvwxyz </td>
+                    <td> 100 </td>
+                    <td> <input type="number" placeholder="Quantity"> </td>
+                </tr>
+                <tr>
+                    <td> <img src="../static/handicrafts.jpg"/> </td>
+                    <td> Sample </td>
+                    <td> abcdefghijklmnopqrstuvwxyz </td>
+                    <td> 100 </td>
+                    <td> <input type="number" placeholder="Quantity"> </td>
+                </tr>
+                <tr>
+                    <td> <img src="../static/handicrafts.jpg"/> </td>
+                    <td> Sample </td>
+                    <td> abcdefghijklmnopqrstuvwxyz </td>
+                    <td> 100 </td>
+                    <td> <input type="number" placeholder="Quantity"> </td>
+                </tr>
+                <tr>
+                    <td> <img src="../static/handicrafts.jpg"/> </td>
+                    <td> Sample </td>
+                    <td> abcdefghijklmnopqrstuvwxyz </td>
+                    <td> 100 </td>
+                    <td> <input type="number" placeholder="Quantity"> </td>
+                </tr>
+            </table>
         </div>
-        
-        <div>
-            <img src = "../static/honey.jfif"/>
-            <p>Freshly harvested wild honey</p>
-        </div>
-        
-        <div>
-            <img src = "../static/laddoo.png"/>
-            <p>Laddoos</p>
-        </div>
-
-        <div>
-            <img src ="../static/pickle_1.jpg"/>
-            <p>Fresh home made pickles</p>
-        </div>
-
-        <div>
-            <img src = "../static/sambar.jfif"/>
-            <p>Freshly grounded sambar powder</p>
-        </div>
-     </body>
+    </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Checkout yout items</title>
+        <title>Checkout your items</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
@@ -24,8 +24,8 @@
                 font-size: 40px;
                 display: block;
                 color: white;
-                margin-left: 70px;
-                margin-top: 30px;
+                margin-left: 50px;
+                margin-top: 10px;
             }
             div{
                 max-width: 65%;
@@ -33,12 +33,13 @@
                 margin-left: 40px;
                 margin-right: 40px;
                 margin-bottom: 40px;
-                padding: 40px;
+                padding: 20px;
                 background-color: #00aec4;
                 border-radius: 10px;
             }
             button{
-                margin: 40px;
+                margin-left: 40px;
+                margin-right: 40px;
                 padding: 15px;
                 font-family: 'Lancelot', cursive;
                 font-size: 30px;
@@ -51,21 +52,37 @@
                 text-decoration: none;
                 color: #00aec4;
             }
-            img{
-                width: 250px;
-                height: 250px;
-                border-radius: 10px;
+            input[type='radio'] {
+                display: none;
             }
-            form input text{
-                font-family: "Open Sans", sans-serif;
-                outline: 0;
-                background: #f2f2f2;
-                width: 100%;
-                border: 0;
-                margin: 0 0 15px;
-                padding: 15px;
-                box-sizing: border-box;
+            label{ 
+                font-family: 'Lancelot', cursive;
                 font-size: 20px;
+                color: white;
+            }
+            label:before {
+                content: " ";
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                margin: 0 5px 0 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 11px;
+                border: 2px solid white;
+                background-color: transparent;
+            }
+
+            input[type='radio']:checked+label:before {
+                position: relative;
+                border: 2px solid white;
+                border-radius: 11px;
+                width: 20px;
+                height: 20px;
+                top: 5px;
+                content: " ";
+                display: inline-block;
+                background-color: black;
             }
             p{
                 margin-left: 100px;
@@ -79,17 +96,20 @@
     <body>
         <h1>Desi Angadi</h1>
         <div>
-            <h3>Checkout Items</h3>
-            <p><lablel for="bill">Your total is: </lablel></p>
-            <input type = "text" id ="bill" name = "bill">
-            <h3>Choose your method of payment</h3>
-            <p><input type ="radio" id = "credit card" name="payement" value="credit card"></p>
-            <p><label for = "credit card">Credit Card</label><br></p>
-            <p><input type ="radio" id = "debit card" name="payement" value="debit card"></p>
-            <p><label for = "debit card">Debit Card</label><br></p>
-            <p><input type ="radio" id = "cod" name="payement" value="cod"></p>
-            <p><label for = "cod">C.O.D</label><br></p>
-            <button><a href ="https://www.google.com"/>CONFRM</button>
+            <form>
+                <h3>Checkout Items</h3>
+                <p>Your total is: </p>
+                <h3>Choose your method of payment</h3>
+                <div class="radio">
+                    <input type ="radio" id = "credit card" name="payement" value="credit card">
+                    <label for = "credit card">Credit Card</label><br>
+                    <input type ="radio" id = "debit card" name="payement" value="debit card">
+                    <label for = "debit card">Debit Card</label><br>
+                    <input type ="radio" id = "cod" name="payement" value="cod">
+                    <label for = "cod">C.O.D</label><br>
+                </div>
+            </form>
+            <button><a href ="https://www.google.com"/>CONFIRM</button>
             <button><a href ="https://www.google.com"/>ADD MORE</button>
             <button>CANCEL</button>
         </div>
