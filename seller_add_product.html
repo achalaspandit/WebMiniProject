@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Seller Inventory</title>
+        <title>Add Product</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
@@ -14,108 +14,63 @@
             }
             h1{
                 font-family: 'Princess Sofia', cursive;
-                font-size: 60px;
+                font-size: 45px;
                 color: #004A63;
-                margin-left: 70px;
-                margin-top: 25px;
-            }
-            h3{
-                font-family: 'Lancelot', cursive;
-                font-size: 40px;
-                display: inline;
-                color: white;
-                margin-left: 70px;
-                margin-top: 30px;
-            }
-            a{
-                font-family: 'Lancelot', cursive;
-                font-size: 25px;
-                text-decoration: none;
-                margin-right: 50px;
-                float: right;
-                color: white;
-                padding: 10px;
-                border-radius: 10px;
-                border: 1px solid white;
-            }
-            div{
+                margin-left: 40px;
                 margin-top: 20px;
-                margin-left: 60px;
-                margin-right: 40px;
-                margin-bottom: 40px;
-                padding: 20px;
-                float: left;
-                background-color: #00aec4;
-                border-radius: 10px;
             }
-            table{
+            form {
+                padding: 15px;
+                margin-left: 100px;
+                width: 650px;
+                border-radius: 10px;
+                background: #00aec4;
+                text-align: center;
+            }
+            form input{
                 font-family: 'Lancelot', cursive;
-                font-size: 20px;
-                color: white;
-                margin: 20px;
-            }
-            th,tr,td{
-                padding: 12px;
-                border-bottom: 1px solid white;
-            }
-            img{
-                height: 150px;
-                width: 150px;
+                background: #f2f2f2;
+                width: 100%;
+                border: none;
                 border-radius: 10px;
+                margin: 0 0 15px;
+                padding: 12px;
+                box-sizing: border-box;
+                font-size: 20px;
             }
-            .form {
-            border-radius: 10px;
-            background: #00aec4;
-            max-width: 320px;
-            margin-left: 230px;
-            margin-top: 60px;
-            padding: 45px;
-            text-align: center;
+            form button{
+                font-family: 'Lancelot', cursive;
+                background: #f2f2f2;
+                align-self: center;
+                width: 50%;
+                border: 0;
+                border-radius: 10px;
+                padding: 12px;
+                color: black;
+                font-size: 20px;
             }
-            .form input, textarea {
-            font-family: "Open Sans", sans-serif;
-            outline: 0;
-            background: #f2f2f2;
-            width: 100%;
-            border: 0;
-            margin: 0 0 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            font-size: 20px;
-            }
-            .form button {
-            font-family: "Open Sans", sans-serif;
-            text-transform: uppercase;
-            background: white;
-            width: 100%;
-            border: 0;
-            padding: 15px;
-            color: black;
-            font-size: 20px;
-            }
-            .form button:hover,.form button:active,.form button:focus {
+            form button:hover{
             background: #51ce57;
             }
-            .form .register-form {
-            display: none;
-            }
-            button a{
-            text-decoration: none;
-            color: #FFFFFF;
+            label{
+                float: left;
+                color: white;
+                font-family: 'Lancelot', cursive;
+                font-size: 30px;
+                margin: 10px;
             }
         </style>
     </head>
     <body>
         <h1>Desi Angadi</h1>
-        <div>
-            <h3>Add Product</h3>
-            <form>
-                <input type="text" placeholder="Name"/>
-                <input type="image" placeholder="Design"/>
-                <input type="number" placeholder="Quantity"/>
-                <input type="number" placeholder="Price"/>
-                <input type="text" placeholder="Description"/>
-            </form>
-        </div>
+        <form>
+            <input type="text" placeholder="Name"/>
+            <label for="img">Upload Design</label>
+            <input type="file" id="img" accept="image/*">
+            <input type="number" placeholder="Quantity"/>
+            <input type="number" placeholder="Price"/>
+            <input type="text" placeholder="Description"/>
+            <button>Add Product</button>
+        </form>
     </body>
 </html>
