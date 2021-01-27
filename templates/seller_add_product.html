@@ -23,7 +23,7 @@
                 padding: 15px;
                 padding-top: 25px;
                 margin-left: 100px;
-                width: 650px;
+                width: 750px;
                 border-radius: 10px;
                 background: #00aec4;
                 text-align: center;
@@ -35,9 +35,9 @@
                 border: none;
                 border-radius: 10px;
                 margin: 0 0 15px;
-                padding: 12px;
+                padding: 14px;
                 box-sizing: border-box;
-                font-size: 20px;
+                font-size: 24px;
             }
             form button{
                 font-family: 'Lancelot', cursive;
@@ -48,7 +48,7 @@
                 border-radius: 10px;
                 padding: 12px;
                 color: black;
-                font-size: 20px;
+                font-size: 24px;
             }
             form button:hover{
             background: #51ce57;
@@ -63,15 +63,20 @@
         </style>
     </head>
     <body>
-        <h1>Desi Angadi</h1>
-        <form>
-            <input type="text" placeholder="Name"/>
-            <label for="img">Upload Design</label>
-            <input type="file" id="img" accept="image/*">
-            <input type="number" placeholder="Quantity"/>
-            <input type="number" placeholder="Price"/>
-            <input type="text" placeholder="Description"/>
-            <button>Add Product</button>
-        </form>
+    <h1>Desi Angadi</h1>
+
+    <form class="login-form" action="{{ url_for('seller_add_product') }}" method="post" enctype="multipart/form-data">
+        <input type="text" name="SellerId" placeholder="sellerID" pattern="[A-Za-z]{3}[A-Za-z0-9]{3-9}" required/>
+        <input type="text" name="prod_name" placeholder="ProductName" pattern="[a-zA-Z\s]+$" required/>
+        <input type="text" name="prod_id" placeholder="Product id" pattern="[A-Za-z]{3}[A-Za-z0-9]{3-9}" required/>
+        <input type="text" name="category" placeholder="category" pattern="Jewellery|Condiments|Handicrafts|Textiles"
+               required/>
+        <input type="number" name="quantity" placeholder="Quantity" min="1" max="20" required/>
+        <input type="number" name="price" placeholder="Price" pattern="[0-9]" required/>
+        <input type="text" name="description" placeholder="Description" pattern="[a-zA-Z\s]+$" required/>
+        <input type="file" name="image"><br>
+        <button>Add Product</button>
+    </form>
+
     </body>
 </html>

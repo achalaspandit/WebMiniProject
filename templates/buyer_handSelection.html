@@ -4,7 +4,7 @@
         <title>Select Items</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
+        <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">
         <style>
             body{
                 background-image: url("../static/BackgroundF.png");
@@ -21,23 +21,33 @@
             }
             h3{
                 font-family: 'Lancelot', cursive;
-                font-size: 40px;
+                font-size: 50px;
                 display: inline;
                 color: white;
                 margin-left: 70px;
                 margin-top: 30px;
             }
+            input{
+                width: 80%;
+                padding: 10px;
+                font-family: 'Lancelot', cursive;
+                font-size: 24px ;
+                border: none;
+                border-radius: 10px;
+            }
+            button{
+                padding: 20px;
+                float: right;
+                font-family: 'Lancelot', cursive;
+                font-size: 35px;
+                border: 1px solid white;
+                border-radius: 10px
+            }
             a{
                 font-family: 'Lancelot', cursive;
                 font-size: 25px;
                 text-decoration: none;
-                margin-right: 50px;
-                float: right;
-                color: white;
-                padding: 10px;
-                border-radius: 10px;
-                border: 1px solid white;
-            }
+                }
             div{
                 margin-top: 20px;
                 margin-left: 60px;
@@ -48,27 +58,19 @@
                 background-color: #00aec4;
                 border-radius: 10px;
             }
-            input{
-                width: 80%;
-                padding: 10px;
-                font-family: 'Lancelot', cursive;
-                font-size: 20px ;
-                border: none;
-                border-radius: 10px;
-            }
             table{
                 font-family: 'Lancelot', cursive;
-                font-size: 20px;
+                font-size: 35px;
                 color: white;
                 margin: 20px;
             }
             th,tr,td{
-                padding: 12px;
+                padding: 18px;
                 border-bottom: 1px solid white;
             }
             img{
-                height: 150px;
-                width: 150px;
+                width: 280px;
+                height: 300px;
                 border-radius: 10px;
             }
         </style>
@@ -78,42 +80,43 @@
         <div>
             <form action="{{ url_for('checkout') }}" method="post">
                 <h3>Please make a selection</h3>
-                <a href="https://www.google.com"> Next</a>
+                <button><a href="/add">NEXT</a></button>
+
                 <table>
                     <tr>
-                        <th> Design </th>
-                        <th> Product Name </th>
-                        <th> Description </th>
-                        <th> Price </th>
-                        <th> Quantity </th>
+                        <th> Design</th>
+                        <th> Product Name</th>
+                        <th> Description</th>
+                        <th> Price</th>
+                        <th> Quantity</th>
                     </tr>
                     <tr>
                         <td> <img src="../static/handicrafts.jpg"/> </td>
                         <td> Sample </td>
                         <td> abcdefghijklmnopqrstuvwxyz </td>
                         <td> 100 </td>
-                        <td> <input type="number" placeholder="Quantity"> </td>
+                        <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
                     </tr>
                     <tr>
                         <td> <img src="../static/handicrafts.jpg"/> </td>
                         <td> Sample </td>
                         <td> abcdefghijklmnopqrstuvwxyz </td>
                         <td> 100 </td>
-                        <td> <input type="number" placeholder="Quantity"> </td>
+                        <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
                     </tr>
                     <tr>
                         <td> <img src="../static/handicrafts.jpg"/> </td>
                         <td> Sample </td>
                         <td> abcdefghijklmnopqrstuvwxyz </td>
                         <td> 100 </td>
-                        <td> <input type="number" placeholder="Quantity"> </td>
+                        <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
                     </tr>
                     <tr>
                         <td> <img src="../static/handicrafts.jpg"/> </td>
                         <td> Sample </td>
                         <td> abcdefghijklmnopqrstuvwxyz </td>
                         <td> 100 </td>
-                        <td> <input type="number" placeholder="Quantity"> </td>
+                        <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
                     </tr>
                 </table>
             </form>

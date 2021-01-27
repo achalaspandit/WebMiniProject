@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Seller Login</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">     
-        <style>
+<head>
+    <title>Buyer Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">
+    <style>
             body{
                 background-image: url("../static/BackgroundF.png");
                 background-repeat: no-repeat;
@@ -68,19 +68,28 @@
             text-decoration: none;
             color: #FFFFFF;
             }
-        </style>
-    </head>
-    <body>
-        <h1>Desi Angadi</h1>
-        <div class="form">
-            <form class="login-form" action="{{ url_for('seller_login') }}" method="post">
-                <input type="text" name="SellerId" placeholder="SellerId"/>
-                <input type="password" name="sellerpassword" placeholder="Password"/>
-                <button>Login</button>
-                <p class="message">Not registered? <a href="/SELLER-SIGN-UP">Create an account</a></p>
-            </form>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="../static/script.js"></script>
-    </body>
+
+
+
+    </style>
+</head>
+<body>
+<h1>Desi Angadi</h1>
+<div class="form">
+    <form class="login-form" action="{{ url_for('buyer_signup1') }}" method="post">
+        <input type="text" name="buyerusername" pattern="[a-zA-Z\s]+$" placeholder="Name"/>
+        <input type="text" name="buyerID" placeholder="Set BuyerID" pattern="(?i)^(?=.*[a-z])[a-z0-9]{4,8}$" required>
+        <input type="password" name="buyerpassword" placeholder="Set Password" pattern="^[a-zA-Z0-9_+&*-] + (?:\\.[a-zA-Z0-9_+&*-]
++ )*@(?:[a-zA-Z0-9-]+\\.) + [a-zA-Z]{2, 7} " required/>
+        <input type="text" name="buyernumber" placeholder="Mobile-No" maxlength="10" max="10" size="10"
+               pattern="^((\+)?(\d{2}[-]))?(\d{10}){1}?$" required/>
+        <input type="text" name="newemail" placeholder="Email address" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"/>
+        <input type="text" name="newemail" placeholder="Address" required/>
+        <button>Create</button>
+        <p class="message">Already registered? <a href="/BUYER-SIGN-IN">Sign In</a></p>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../static/script.js"></script>
+</body>
 </html>

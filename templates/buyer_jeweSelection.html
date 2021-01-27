@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Items</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">
+    <style>
+            body{
+                background-image: url("../static/BackgroundF.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+            h1{
+                font-family: 'Princess Sofia', cursive;
+                font-size: 45px;
+                color: #004A63;
+                margin-left: 40px;
+                margin-top: 20px;
+            }
+            h3{
+                font-family: 'Lancelot', cursive;
+                font-size: 50px;
+                display: inline;
+                color: white;
+                margin-left: 70px;
+                margin-top: 30px;
+            }
+            a{
+                font-family: 'Lancelot', cursive;
+                font-size: 25px;
+                text-decoration: none;
+                }
+            button{
+                padding: 20px;
+                float: right;
+                font-family: 'Lancelot', cursive;
+                font-size: 35px;
+                border: 1px solid white;
+                border-radius: 10px
+            }
+            input{
+                width: 80%;
+                padding: 10px;
+                font-family: 'Lancelot', cursive;
+                font-size: 24px ;
+                border: none;
+                border-radius: 10px;
+            }
+            div{
+                margin-top: 20px;
+                margin-left: 60px;
+                margin-right: 40px;
+                margin-bottom: 40px;
+                padding: 20px;
+                float: left;
+                background-color: #00aec4;
+                border-radius: 10px;
+            }
+            table{
+                font-family: 'Lancelot', cursive;
+                font-size: 35px;
+                color: white;
+                margin: 20px;
+            }
+            th,tr,td{
+                padding: 18px;
+                border-bottom: 1px solid white;
+            }
+            img{
+                width: 280px;
+                height: 300px;
+                border-radius: 10px;
+            }
+
+
+
+    </style>
+</head>
+<body>
+<h1>Desi Angadi</h1>
+<div>
+    <form action="{{ url_for('checkout') }}" method="post">
+        <h3>Please make a selection</h3>
+        <button><a href="/add">NEXT</a></button>
+        <table>
+            <tr>
+                <th> Design</th>
+                <th> Product Name</th>
+                <th> Description</th>
+                <th> Price</th>
+                <th> Quantity</th>
+            </tr>
+            <tr>
+                <td><img src="../static/jewellery.jpg"/></td>
+                <td> Sample</td>
+                <td> abcdefghijklmnopqrstuvwxyz</td>
+                <td> 100</td>
+                <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td><img src="../static/jewellery.jpg"/></td>
+                <td> Sample</td>
+                <td> abcdefghijklmnopqrstuvwxyz</td>
+                <td> 100</td>
+                <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td><img src="../static/jewellery.jpg"/></td>
+                <td> Sample</td>
+                <td> abcdefghijklmnopqrstuvwxyz</td>
+                <td> 100</td>
+                <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
+            </tr>
+            <tr>
+                <td><img src="../static/jewellery.jpg"/></td>
+                <td> Sample</td>
+                <td> abcdefghijklmnopqrstuvwxyz</td>
+                <td> 100</td>
+                <td><input type="number" placeholder="Quantity" min="0" max="5"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

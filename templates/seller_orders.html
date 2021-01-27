@@ -21,7 +21,7 @@
             }
             h3{
                 font-family: 'Lancelot', cursive;
-                font-size: 40px;
+                font-size: 50px;
                 display: inline;
                 color: white;
                 margin-left: 70px;
@@ -39,12 +39,12 @@
             }
             table{
                 font-family: 'Lancelot', cursive;
-                font-size: 20px;
+                font-size: 35px;
                 color: white;
                 margin: 20px;
             }
             th,tr,td{
-                padding: 12px;
+                padding: 18px;
                 border-bottom: 1px solid white;
             }
         </style>
@@ -53,47 +53,27 @@
         <h1>Desi Angadi</h1>
         <div>
             <h3>Orders</h3>
+
             <table>
                 <tr>
-                    <th> Buyer Name </th>
-                    <th> Product Name </th>
-                    <th> Category </th>
-                    <th> Quantity </th>
-                    <th> Price </th>
-                    <th> Status </th>
+                    <th> Buyer name</th>
+                    <th> Buyer address</th>
+                    <th> product name</th>
+                    <th> product id</th>
+                    <th> product id</th>
+                    <th> product id</th>
                 </tr>
-                <tr>
-                    <td> Achala </td>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> 2 </td>
-                    <td> 800 </td>
-                    <td> Confirmed </td>
-                </tr>
-                <tr>
-                    <td> Achala </td>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> 4 </td>
-                    <td> 800 </td>
-                    <td> Completed </td>
-                </tr>
-                <tr>
-                    <td> Achala </td>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> 3 </td>
-                    <td> 800 </td>
-                    <td> Completed </td>
-                </tr>
-                <tr>
-                    <td> Achala </td>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> 9 </td>
-                    <td> 800 </td>
-                    <td> Confirmed </td>
-                </tr>
+                <indent>
+                    {% for itemData in data: %}
+                    <tr>
+                        <indent>
+                            {% for row in itemData: %}
+                            <td>{{ row }}</td>
+                            {% endfor %}
+                        </indent>
+                    </tr>
+                    {% endfor %}
+                </indent>
             </table>
         </div>
     </body>

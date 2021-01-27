@@ -21,11 +21,22 @@
             }
             h3{
                 font-family: 'Lancelot', cursive;
-                font-size: 40px;
+                font-size: 50px;
                 display: inline;
                 color: white;
                 margin-left: 70px;
                 margin-top: 30px;
+            }
+            a{
+                font-family: 'Lancelot', cursive;
+                font-size: 25px;
+                text-decoration: none;
+                margin-right: 50px;
+                float: right;
+                color: white;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid white;
             }
             button{
                 font-family: 'Lancelot', cursive;
@@ -50,18 +61,13 @@
             }
             table{
                 font-family: 'Lancelot', cursive;
-                font-size: 20px;
+                font-size: 35px;
                 color: white;
                 margin: 20px;
             }
             th,tr,td{
-                padding: 12px;
+                padding: 18px;
                 border-bottom: 1px solid white;
-            }
-            img{
-                height: 150px;
-                width: 150px;
-                border-radius: 10px;
             }
         </style>
     </head>
@@ -72,48 +78,77 @@
             <form action="{{ url_for('addproduct') }}" method="post">
                 <button> + Add Product</button>
             </form>
+            <!--            {% for itemData in data %}-->
+            <!--	<table>-->
+
+            <!--		<td id="productName">-->
+            <!--			{% for row in itemData %}-->
+            <!--			<tr>-->
+            <!--				{{row[0]}}-->
+            <!--			</tr>-->
+            <!--			{% endfor %}-->
+            <!--		</td>-->
+            <!--        <td id="category">-->
+            <!--			{% for row in itemData %}-->
+            <!--			<tr>-->
+            <!--				{{row[1]}}-->
+            <!--			</tr>-->
+            <!--			{% endfor %}-->
+            <!--		</td>-->
+            <!--		<td id="Design">-->
+            <!--			{% for row in itemData %}-->
+            <!--			<tr>-->
+            <!--					<img src='static/uploadImage'+{{row[2]}} />-->
+            <!--				</a>-->
+            <!--			</tr>-->
+            <!--			{% endfor %}-->
+            <!--		</td>-->
+            <!--		<td id="Quantity">-->
+            <!--			{% for row in itemData %}-->
+            <!--			<tr>-->
+            <!--				${{row[3]}}-->
+            <!--			</tr>-->
+            <!--			{% endfor %}-->
+            <!--		</td>-->
+            <!--        <td id="Price">-->
+            <!--			{% for row in itemData %}-->
+            <!--			<tr>-->
+            <!--				{{row[4]}}-->
+            <!--			</tr>-->
+            <!--			{% endfor %}-->
+            <!--		</td>-->
+            <!--        <td id="Design">-->
+            <!--			{% for row in itemData %}-->
+            <!--			<tr>-->
+            <!--				{{row[5]}}-->
+            <!--			</tr>-->
+            <!--			{% endfor %}-->
+            <!--		</td>-->
+            <!--	</table>-->
+            <!--	{% endfor %}-->
+
             <table>
                 <tr>
-                    <th> Product Name </th>
-                    <th> Category </th>
-                    <th> Design </th>
-                    <th> Quantity </th>
-                    <th> Price </th>
-                    <th> Description </th>
+                    <th> Product Name</th>
+                    <th> Category</th>
+                    <th> Quantity</th>
+                    <th> Price</th>
+                    <th> Description</th>
+
                 </tr>
-                <tr>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> <img src="../static/handicrafts.jpg"/> </td>
-                    <td> 100 </td>
-                    <td> 800 </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                </tr>
-                <tr>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> <img src="../static/jewellery.jpg"/>  </td>
-                    <td> 100 </td>
-                    <td> 800 </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                </tr>
-                <tr>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> <img src="../static/condiments.png"/>  </td>
-                    <td> 100 </td>
-                    <td> 800 </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                </tr>
-                <tr>
-                    <td> Sample </td>
-                    <td> Handicrafts </td>
-                    <td> <img src="../static/textile.jpg"/>  </td>
-                    <td> 100 </td>
-                    <td> 800 </td>
-                    <td> abcdefghijklmnopqrstuvwxyz </td>
-                </tr>
+                <indent>
+                    {% for itemData in data: %}
+                    <tr>
+                        <indent>
+                            {% for row in itemData: %}
+                            <td>{{ row }}</td>
+                            {% endfor %}
+                        </indent>
+                    </tr>
+                    {% endfor %}
+                </indent>
             </table>
+
         </div>
     </body>
 </html>

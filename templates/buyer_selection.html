@@ -43,40 +43,46 @@
                 padding: 10px;
                 width: 90%;
                 font-family: 'Lancelot', cursive;;
-                font-size: 25px;
+                font-size: 35px;
                 border: none;
                 border-radius: 10px;
                 color: #00aec4;
                 background-color: white;
             }
             img{
-                width: 150px;
-                height: 150px;
+                width: 280px;
+                height: 300px;
                 border-radius: 10px;
             }
         </style>
     </head>
     <body>
-        <h1>Desi Angadi</h1>
-        <h3>Namaste, you are looking for...?</h3>
-        <form action="{{ url_for('buyer_item') }}" method="post">
-            <div>
-                <img src="../static/condiments.png"/> <br/>
-                <button> Condiments</button>
-            </div>
-            <div>
-                <img src="../static/handicrafts.jpg"/> <br/>
-                <button>Handicrafts</button>
-            </div>
-            <div>
-                <img src="../static/jewellery.jpg"/> <br/>
-                <button>Jewellery</button>
-            </div>
-            <div>
-                <img src="../static/textile.jpg"/> <br/>
-                <button>Textiles</button>
-            </div>
-        </form>
-        
+    <h1>Desi Angadi</h1>
+    <h3>Namaste, you are looking for...?</h3>
+    <form action="{{ url_for('buyer_cond') }}" method="post">
+        <div>
+            <img src="../static/condiments.png"/> <br/>
+            <button> Condiments</button>
+        </div>
+    </form>
+    <form action="{{ url_for('buyer_hand') }}" method="post">
+        <div>
+            <img src="../static/handicrafts.jpg"/> <br/>
+            <button>Handicrafts</button>
+        </div>
+    </form>
+    <form action="{{ url_for('buyer_jewe') }}" method="post">
+        <div>
+            <img src="../static/jewellery.jpg"/> <br/>
+            <button>Jewellery</button>
+        </div>
+    </form>
+    <form action="{{ url_for('buyer_text') }}" method="post">
+        <div>
+            <img src="../static/textile.jpg"/> <br/>
+            <button>Textiles</button>
+        </div>
+    </form>
+
     </body>
 </html>

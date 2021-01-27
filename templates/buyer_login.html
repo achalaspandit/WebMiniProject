@@ -22,7 +22,7 @@
             .form {
             border-radius: 10px;
             background: #00aec4;
-            max-width: 320px;
+            max-width: 520px;
             margin-left: 230px;
             margin-top: 60px;
             padding: 45px;
@@ -37,7 +37,7 @@
             margin: 0 0 15px;
             padding: 15px;
             box-sizing: border-box;
-            font-size: 20px;
+            font-size: 25px;
             }
             .form button {
             font-family: "Open Sans", sans-serif;
@@ -47,7 +47,7 @@
             border: 0;
             padding: 15px;
             color: black;
-            font-size: 20px;
+            font-size: 25px;
             }
             .form button:hover,.form button:active,.form button:focus {
             background: #51ce57;
@@ -73,18 +73,11 @@
     <body>
         <h1>Desi Angadi</h1>
         <div class="form">
-            <form class="register-form">
-            <input type="text" name= "newusername" placeholder="name"/>
-            <input type="password" name="newpassword" placeholder="password"/>
-            <input type="text" name="newemail" placeholder="email address"/>
-            <button>Create</button>
-            <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
             <form class="login-form" action="{{ url_for('buyer_login') }}" method="post">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" placeholder="password"/>
-            <button>Login</button>
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
+                <input type="text" name="buyerId" placeholder="BuyerId"/>
+                <input type="password" name="password" placeholder="Password"/>
+                <button>Login</button>
+                <p class="message">Not registered? <a href="/BUYER-SIGN-UP">Create an account</a></p>
             </form>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

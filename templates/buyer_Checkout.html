@@ -98,27 +98,38 @@
         <div>
             <form>
                 <h3>Checkout Items</h3>
-                <p>Your total is: </p>
+                <p>Your total is: 500.00 INR </p>
+                <br>
+                <br>
+
+                <br>
+                <!--                <form action="{{ url_for('previous') }}" method="post">-->
+                <button><a href="/previous">ADD MORE</a></button>
+
+                <br>
                 <h3>Choose your method of payment</h3>
                 <div class="radio">
-                    <input type ="radio" id = "credit card" name="payement" value="credit card">
-                    <label for = "credit card">Credit Card</label><br>
-                    <input type ="radio" id = "debit card" name="payement" value="debit card">
-                    <label for = "debit card">Debit Card</label><br>
-                    <input type ="radio" id = "cod" name="payement" value="cod">
-                    <label for = "cod">C.O.D</label><br>
+                    <input type="radio" id="credit card" name="payement" value="credit card">
+                    <label for="credit card">Credit Card</label><br>
+                    <input type="radio" id="debit card" name="payement" value="debit card">
+                    <label for="debit card">Debit Card</label><br>
+                    <input type="radio" id="cod" name="payement" value="cod">
+                    <label for="cod">C.O.D</label><br>
                 </div>
             </form>
-            <form action="{{ url_for('card') }}" method="post">
-                <button>CONFIRM</button>
+
+
+            <!--            <form action="{{ url_for('card') }}" method="post">-->
+            <!--                <div class="form">-->
+            <!--            <input type="text" name="BuyerName" placeholder="Name"/>-->
+            <!--             <input type="text" name="address" placeholder="Enter Address"/>-->
+            <!--                </div>-->
+            <button><a href="/success">CONFIRM</a></button>
             </form>
-            <form action="{{ url_for('previous') }}" method="post">
-                <button>ADD MORE</button>
-            </form>
+            <br>
             <form action="{{ url_for('gohome') }}" method="post">
                 <button>CANCEL</button>
             </form>
-            
         </div>
      </body>
 </html>
